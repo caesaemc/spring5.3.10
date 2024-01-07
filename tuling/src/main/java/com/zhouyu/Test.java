@@ -26,6 +26,8 @@ import java.lang.reflect.Method;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
+// 我的微信：dadudu6789
+// 我的公众号：IT周瑜
 public class Test {
 
 	public static void main(String[] args) {
