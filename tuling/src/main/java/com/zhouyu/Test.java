@@ -38,7 +38,6 @@ public class Test {
 		UserService userService = (UserService) applicationContext.getBean("userService");
 		userService.test();
 
-
 //		UserService userService1 = new UserService();
 //
 //		for (Field field : userService1.getClass().getDeclaredFields()) {
@@ -70,7 +69,7 @@ public class Test {
 //			public Object invoke(@NotNull MethodInvocation invocation) throws Throwable {
 //				System.out.println("切面逻辑 before...");
 //				Object result = invocation.proceed();
-////				Object result = invocation.getMethod().invoke(invocation.getThis(), invocation.getArguments());
+//				Object result = invocation.getMethod().invoke(invocation.getThis(), invocation.getArguments());
 //				System.out.println("切面逻辑 after...");
 //				return result;
 //			}
