@@ -348,6 +348,7 @@ class DisposableBeanAdapter implements DisposableBean, Runnable, Serializable {
 		String destroyMethodName = beanDefinition.resolvedDestroyMethodName;
 		if (destroyMethodName == null) {
 			destroyMethodName = beanDefinition.getDestroyMethodName(); //
+			//zheli
 			if (AbstractBeanDefinition.INFER_METHOD.equals(destroyMethodName) ||
 					(destroyMethodName == null && bean instanceof AutoCloseable)) {
 				// Only perform destroy method inference or Closeable detection

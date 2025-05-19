@@ -42,6 +42,6 @@ public interface BeanExpressionResolver {
 	 * @throws BeansException if evaluation failed
 	 */
 	@Nullable
-	Object evaluate(@Nullable String value, BeanExpressionContext evalContext) throws BeansException;
+	Object  evaluate(@Nullable String value, BeanExpressionContext evalContext) throws BeansException;
 
 }

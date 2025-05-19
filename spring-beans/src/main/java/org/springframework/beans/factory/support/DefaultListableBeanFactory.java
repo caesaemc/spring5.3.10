@@ -1338,6 +1338,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 	}
 
 	@Nullable
+	//！！！！！star 5
 	public Object doResolveDependency(DependencyDescriptor descriptor, @Nullable String beanName,
 			@Nullable Set<String> autowiredBeanNames, @Nullable TypeConverter typeConverter) throws BeansException {
 
@@ -1358,7 +1359,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 					String strVal = resolveEmbeddedValue((String) value);
 					BeanDefinition bd = (beanName != null && containsBean(beanName) ?
 							getMergedBeanDefinition(beanName) : null);
-					// 解析Spring表达式(#{})
+					// 解析Spring表达式(#{}) find bean
 					value = evaluateBeanDefinitionString(strVal, bd);
 				}
 				// 将value转化为descriptor所对应的类型
@@ -1381,6 +1382,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 			}
 
 			// 找到所有Bean，key是beanName, value有可能是bean对象，有可能是beanClass
+			//核心
 			Map<String, Object> matchingBeans = findAutowireCandidates(beanName, type, descriptor);
 			if (matchingBeans.isEmpty()) {
 				// required为true，抛异常

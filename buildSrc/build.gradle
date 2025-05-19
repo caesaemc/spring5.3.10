@@ -3,8 +3,14 @@ plugins {
 }
 
 repositories {
+	// 添加阿里云镜像（优先使用）
+	maven { url 'https://maven.aliyun.com/repository/public' }          // Maven Central 镜像
+	maven { url 'https://maven.aliyun.com/repository/spring' }          // Spring 仓库镜像
+	maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }   // Gradle 插件镜像
+
+	// 原仓库声明（保留但顺序靠后）
 	mavenCentral()
-	gradlePluginPortal()
+	maven { url 'https://repo.spring.io/plugins-release' }  // 原仓库，可能需要代理访问
 }
 
 dependencies {

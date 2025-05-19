@@ -37,6 +37,7 @@ public class Test {
 
 		UserService userService = (UserService) applicationContext.getBean("userService");
 		userService.test();
+		applicationContext.close();
 
 //		UserService userService1 = new UserService();
 //
